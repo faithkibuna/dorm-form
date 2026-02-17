@@ -1,5 +1,6 @@
-const form = document.getElementById("ageForm");
-const birthYearInput = document.getElementById("birthYear");
+const form = document.getElementById("age Form");
+const nameInput = document.getElementById("name");
+const birthYearInput = document.getElementById("birthyear");
 const resultDiv = document.getElementById("result");
 
 form.addEventListener("submit", function (event) {
@@ -36,6 +37,6 @@ form.addEventListener("submit", function (event) {
     <p>This age is: ${oddOrEven}</p>
     <p>Generation: ${generation}</p>
     <p>Born in Leap Year: ${isLeap ? "Yes" : "No"}</p>
-    <p>In ${currentYear}, they turn: ${willTurn}</p>
+    
   `;
 });

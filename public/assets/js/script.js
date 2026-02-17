@@ -11,23 +11,21 @@ const title = document.getElementById("formTitle");
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // stop page refresh
 
-  const name = nameInput.value.trim();
+  const name = nameInput.value.trim(); // trim to remove extra spaces
   const email = emailInput.value.trim();
   const message = messageInput.value.trim();
 
   // Validate fields
   if (name === "" || email === "" || message === "") {
-    alert("Please fill all fields");
+    alert("Please fill all fields"); // shows alert if any field is empty
     return;
   }
 
   // Add to submissions array
-//  submissions.push({ name, email, message });
+  //  submissions.push({ name, email, message });
 
   // Clear previous output
-  outputDiv.innerHTML = "";
-
-  outputDiv.innerHTML = ""; // clear previous entry
+  outputDiv.innerHTML = ""; // clear previous entry this prevent duplication  again been stack on top of previous one prevent repetition
   const div = document.createElement("div");
   div.innerHTML = `<strong>Name:</strong> ${name} <br>
                  <strong>Email:</strong> ${email} <br>
@@ -37,8 +35,9 @@ form.addEventListener("submit", function (event) {
   // Optional: show success message above the form title
   const successMessage = document.createElement("p");
   successMessage.textContent = "Form submitted successfully!";
-  successMessage.style.color = "green";
+
   title.before(successMessage);
+  outputDiv.innerHTML(successMessage); // this will add the success message to the output div
 
   // Log submission to console
   console.log("Form Submitted!");
@@ -47,7 +46,7 @@ form.addEventListener("submit", function (event) {
   console.log("Message:", message);
 
   // Clear form fields
-    nameInput.value = "";
-    emailInput.value = "";
-    messageInput.value = "";
-  });
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+});

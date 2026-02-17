@@ -6,19 +6,14 @@
     <link rel="stylesheet" href="assets/css/style.css  " />
     <title>form</title>
   </head>
-    
+
   <body class="bg-gray-00 flex items-center justify-center min-h-screen">
     <form
       action="/submit"
-      id="myForm"
+      id="age Form"
       method="post"
       class="bg-white p-8 rounded shadow-md w-96"
     >
-    <form action="/submit" method="POST">
-      <h2 id="formTitle" class="text-2xl font-bold mb-6 text-center">
-         FORM
-      </h2>
-
       <!-- Name -->
       <label for="name" class="block text-gray-700">full name</label>
       <input
@@ -28,35 +23,12 @@
         required
         class="w-full px-3 py-2 border rounded-lg mb-4"
       />
-      
-      <label for="date of birth" class="block text-gray-700">Date of Birth</label>
+
+      <label for="birthyear" class="block text-gray-700">Birth Year</label>
       <input
         type="date"
-        id="dob"
-        name="dob"
-        required
-        class="w-full px-3 py-2 border rounded-lg mb-4"
-      />
-
-      <label for="gender" class="block text-gray-700">Gender</label>
-      <select
-        id="gender"
-        name="gender"
-        required
-        class="w-full px-3 py-2 border rounded-lg mb-4"
-      > 
-        <option value="">Select your gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-
-      <!-- Email -->
-      <label for="email" class="block text-gray-700">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
+        id="birthyear"
+        name="birthyear"
         required
         class="w-full px-3 py-2 border rounded-lg mb-4"
       />
@@ -69,6 +41,7 @@
         Submit
       </button>
     </form>
+    <div id="result" class="mt-6 text-center text-xl font-semibold"></div>
     <script src="./assets/js/form.js" defer></script>
   </body>
 </html>
